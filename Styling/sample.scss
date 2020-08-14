@@ -1,0 +1,363 @@
+
+
+//Color Scheme
+$darkBack:#222831;
+$greyBack:#393e46;
+$flairColor:#d65a31;
+$lightBack:#eeeeee;
+
+$valiantBlue:#2A6374;
+$radiantWhite:#FFFFF1;
+$darkHorse:#090F1D;
+$goldenMoment:#D1BB68;
+$championSteel:#8B8E85;
+
+//Fonts in Use
+$storeFont:"Monotype Corsiva";
+$talkFont:"Lucida Handwriting";
+$baseFont:"Verdana";
+
+
+.hoverFlow{
+  overflow:hidden;
+}
+
+.hoverflow:hover{
+  overflow:auto;
+}
+
+#alertBanner{
+  height:0;
+  position:fixed;
+  width:100%;
+  bottom:0;
+  text-align:center;
+  background-color:black;
+  opacity:.8;
+  color:white;
+  transition: height 2s;
+}
+
+#tabRow{
+  width:100%;
+  height:20%;
+  min-height:3rem;
+  display:flex;
+  flex-wrap:wrap;
+  //border:2px solid black;
+  // position:absolute;
+  // bottom:0;
+  .tabButton{
+    font-family:$storeFont;
+    font-size:3.5em;
+    // background-color:$valiantBlue;
+    // border:none;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:$radiantWhite;
+    flex-grow:1;
+  }
+
+  .tabButton:hover{
+    color:$goldenMoment;
+    font-weight:bold;
+  }
+
+}
+
+.activeAlert{
+  height:5vh !important;
+}
+
+#shopBanner{
+  height:15vh;
+  background-color:$darkBack;
+  overflow:hidden;
+  #bannerImage{
+    background-image:url("https://res.cloudinary.com/metaverse/image/upload/v1541010545/Avatars/Higgsy/side_higgsMad.png");
+    background-size:100%  100%;
+    background-repeat:no-repeat;
+    border-radius:50%;
+    border:4px groove $greyBack;
+
+  }
+  #bannerTitle{
+  font-size:250%;
+
+  font-family:$storeFont;
+  color:$flairColor;
+  }
+  #bannerTagline{
+    font-size:120%;
+    font-family:$talkFont;
+    color:$flairColor;
+  }
+}
+#footer{
+  background-color:black;
+  color:$goldenMoment;
+  position:relative;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+
+body{
+  background-image:url("../images/5dots.png");
+  font-family:$baseFont;
+  button:hover{
+    cursor:pointer;
+  }
+}
+
+#templeRow{
+  display:flex;
+  justify-content:center;
+  margin-top:5%;
+  margin-bottom:5%;
+  #temple{
+
+
+    width:70vw;
+    height:70vw;
+    position:relative;
+    border: .4vw inset #D1BB68;
+    border-radius:1%;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+
+    #templeComplete{
+      position:absolute;
+      height:100%;
+      width:100%;
+      background-size:100% 100%;
+      background-repeat: no-repeat;
+      transition:opacity 1.5s;
+    }
+
+  }
+}
+#shrineRow{
+  display:flex;
+  justify-content:center;
+  margin-top:5%;
+  margin-bottom:5%;
+  #shrine{
+
+
+    width:70vw;
+    height:70vw;
+    position:relative;
+    border: .4vw inset #D1BB68;
+    border-radius:1%;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+
+    #shrineGarland{
+      position:absolute;
+      height:100%;
+      width:100%;
+      background-size:100% 40%;
+      background-repeat: no-repeat;
+    }
+    .shrineDiya{
+      position:absolute;
+      height:15vw;
+      width:18vw;
+      background-size:100% 100%;
+      background-repeat: no-repeat;
+      Bottom: -7%;
+
+
+      &.leftDiya{
+
+        left: -10%;
+      }
+
+      &.rightDiya{
+        right: -10%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+#shrineButtonRow{
+  display:flex;
+  margin-left:10%;
+  margin-bottom:25vh;
+  width:80%;
+  justify-content:space-around;
+  #congratsMessage{
+    text-align: center;
+    font-family:$storeFont;
+    color:white;
+    font-size:4em;
+  }
+  #buildButton{
+    font-size:4em;
+    font-family: $storeFont;
+    color:gold;
+    background-color:black;
+  }
+
+  .shrineButton{
+    height:15vw;
+    width: 15vw;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    border: 5px solid black;
+    border-radius:50%;
+    cursor:pointer;
+    background-color:grey;
+
+    &:hover{
+      box-shadow:5px 10px black;
+    }
+    &:active{
+      border: 8px solid white;
+      box-shadow:none;
+    }
+  }
+}
+
+
+
+.invisible{
+  opacity:0;
+}
+
+.formGroupTitle{
+  font-family:$storeFont;
+  font-size:2em;
+  text-align:center;
+  color:$flairColor;
+}
+
+#formWorkspace{
+  width:700px;
+  height:100%;
+  overflow:hidden;
+  background-color:#393e46;
+
+  .formContainer{
+    background-color:$darkBack;
+    border:5px groove #000000;
+    .formStyle{
+      background-color:$greyBack;
+      color:$lightBack;
+      border:2px inset $lightBack;
+      border-radius:5%;
+    }
+    .addFormButton{
+      width:100%;
+    }
+
+  }
+
+  .catalogueAddForm{
+    color:$lightBack;
+  }
+
+
+}
+
+#formWorkspace:hover{
+  overflow:auto;
+}
+
+#cardContainer{
+  width:400px;
+  background-color:$darkBack;
+  box-shadow: 1px 1px 5px #555 inset;
+}
+
+
+
+
+
+
+
+.closableDiv{
+  position:relative;
+
+}
+
+.closeButton{
+  opacity:0;
+  position:absolute;
+  top:10px;
+  right:10px;
+  height:25px;
+  width:25px;
+  background-color:grey;
+  background-image:url("https://res.cloudinary.com/metaverse/image/upload/v1548289539/icons8-delete-48.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  border:1px solid black;
+  transition:opacity .5s;
+  z-index:5;
+
+}
+
+.closableDiv:hover{
+  .closeButton{
+    opacity:1;
+  }
+}
+.closeButton:hover{
+  cursor:pointer;
+}
+
+.filterToggle{
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  height:0;
+  top: 50%;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  label{
+    background-color:grey;
+    border-radius:5%;
+    -webkit-box-shadow: 0px 5px 8px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 8px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 8px 3px rgba(0,0,0,0.75);
+    cursor: pointer;
+  }
+  input:checked+label{
+    background-color:$flairColor;
+    outline-style: groove;
+    outline-color: white;
+    outline-width:2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.gridTile{
+  border:2px solid black;
+  width:10%;
+  height:100%;
+  background-size:100% 100%;
+  background-color:$greyBack;
+  &.activeTile{
+    border:2px groove white;
+  }
+}
+
+.gridTile:hover{
+  cursor:pointer;
+}
