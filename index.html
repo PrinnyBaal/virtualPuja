@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Pujas</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="Styling/sample.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/sheetStats.js"></script>
+  <script src="src/view/sheetLogic.js"></script>
+
+  <script>
+   window.addEventListener( "load", sheetProj.view.sheetLogic.setupUserInterface);
+  </script>
+</head>
+
+<style>
+</style>
+<body>
+
+  <div id="tabRow">
+      <button id="ramBtn" class="tabButton physicalButton" onclick="displayGod('Ram');">---</button>
+      <button id="shivaBtn" class="tabButton physicalButton" onclick="displayGod('Shiva');">Shiva</button>
+      <button id="templeBtn" class="tabButton physicalButton" onclick="createTemple();">Temple</button>
+      <button id="krishnaBtn" class="tabButton physicalButton" onclick="displayGod('Krishna');">Krishna</button>
+      <button id="hanumanBtn" class="tabButton physicalButton" onclick="displayGod('Hanuman');">Hanuman</button>
+  </div>
+
+  <div id="creationArea">
+
+    <div id="templeRow">
+      <div id="temple">
+        <div id="templeComplete"
+        class ="invisible"
+        ></div>
+
+      </div>
+    </div>
+
+    <div id="shrineButtonRow">
+      <button id="buildButton" onclick="myTemple.build()"> BUILD</button>
+
+    </div>
+
+  </div>
+
+
+  <audio id="chantAudio"></audio>
+  <audio id="alightAudio"></audio>
+  <audio id="brickAudio"></audio>
+
+
+  <div id="footer" class="container-fluid">
+
+      <div class="row h-100 pb-4">
+        <div class="col" >
+          <br>
+
+          <p><emsp>Diya lit/unlit(edit): <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a></p>
+          <p><emsp>Bell: <a href="https://pixabay.com/users/confused_me-32339/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">Bart K.</a></p>
+          <hr>
+        </div>
+        <div class="col" >
+          <br>
+          <p><emsp>Hanuman Image: <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a></p>
+          <p><emsp>Krishna Image: <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a></p>
+          <p><emsp>Shiva Image: <a href="https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/">Flickr</a></p>
+          <p><emsp>Ram Image: <a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a></p>
+          <hr>
+          <p><emsp>Temple Image: <a href="https://pixabay.com/users/krisnadathur-10660404/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3809492">Kris Nadathur</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3809492">Pixabay</a></p>
+          <p><emsp>Garland: <a href="https://pixabay.com/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3322667">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3322667">Pixabay</a></p>
+          <p><emsp>Diya: <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a></p>
+          <p><emsp>Chant: <a href="https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33862">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33862">Pixabay</a></p>
+
+
+
+
+        </div>
+      </div>
+  </div>
+</body>
+
+
+<!-- plugins to con sider -->
+
+<!-- Boxfit allows us to scale text to fit dynamically sized divs....well, at least it helps you'll have to call it each time the div changes size https://michikono.github.io/boxfit/ -->
+<!-- <script src="bower_components/jquery.boxfit/dist/jquery.boxfit.min.js" type="text/javascript"></script> -->
