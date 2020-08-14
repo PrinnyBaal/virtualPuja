@@ -41,68 +41,68 @@ let assets={
     attribution:`Image by <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a>`,
   },
   diyaUnlit:{
-      art:"../images/diyaLeftUnlit.png",
+      art:"./images/diyaLeftUnlit.png",
       attribution:`Image by <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a>`,
   },
   diyaLit:{
-    art:"../images/diyaLeft.png",
+    art:"./images/diyaLeft.png",
   },
   BellButton:{
-    art:"../images/bell.jpg",
+    art:"./images/bell.jpg",
     attribution:`Image by <a href="https://pixabay.com/users/confused_me-32339/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">confused_me</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">Pixabay</a>`,
   },
   ChantButton:{
-    art:"../images/chantButton.png",
+    art:"./images/chantButton.png",
     attribution:`Image by <a href="https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33862">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=33862">Pixabay</a>`,
   },
   DiyaButton:{
-    art:"../images/diyaButton.jpg",
+    art:"./images/diyaButton.jpg",
     attribution:`Image by <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a>`,
   },
   garlandButton:{
-    art:"../images/garlandButton.png",
+    art:"./images/garlandButton.png",
     attribution:`Image by <a href="https://pixabay.com/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3322667">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3322667">Pixabay</a>`,
   },
   garland:{
-    art:"../images/garland.png",
+    art:"./images/garland.png",
   },
   templeComplete:{
-    art:`../images/templeComplete.jpg`,
+    art:`./images/templeComplete.jpg`,
     attribution:`Image by <a href="https://pixabay.com/users/krisnadathur-10660404/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3809492">Kris Nadathur</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3809492">Pixabay</a>`,
   },
   Ram:{
-    art:`../images/ramLeap.jpg`,
+    art:`./images/ramLeap.jpg`,
     attribution:`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`,
   },
   Shiva:{
-    art:`../images/shiva.jpg`,
+    art:`./images/shiva.jpg`,
     attribution:`https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/`,
   },
   Krishna:{
-    art:`../images/Krishna.jpg`,
+    art:`./images/Krishna.jpg`,
     attribution:`Image by <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a>`
   },
   Hanuman:{
-    art:`../images/hanuman.jpg`,
+    art:`./images/hanuman.jpg`,
     attribution:`Image by <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a>`,
   },
   bellChime:{
-    sound:"../sounds/bell.wav",
+    sound:"./sounds/bell.wav",
   },
   chant:{
-    sound:"../sounds/murmer.wav"
+    sound:"./sounds/murmer.wav"
   },
   alight:{
-    sound:"../sounds/alight.wav"
+    sound:"./sounds/alight.wav"
   },
   flowerPlace:{
-    sound:"../sounds/flowerPlace.wav"
+    sound:"./sounds/flowerPlace.wav"
   },
   brickDrop:{
-    sound:"../sounds/brickDrop.wav"
+    sound:"./sounds/brickDrop.wav"
   },
   success:{
-    sound:"../sounds/success.wav"
+    sound:"./sounds/success.wav"
   }
 }
 

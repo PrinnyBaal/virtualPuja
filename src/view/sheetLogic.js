@@ -55,7 +55,7 @@ function createShrine(){
 
 function createTemple(){
   let temple=`<div id="templeRow">
-    <div id="temple">
+    <div id="temple" style="background-color:#3449eb">
       <div id="templeComplete"
       class ="invisible"
       ></div>
