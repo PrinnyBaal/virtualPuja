@@ -86,8 +86,8 @@ function setupFlairs(){
 
 function setupTempleSite(){
   templeCounter=0;
-  $("#temple").css("background-image", `url(../images/temple_${templeCounter}.png)`);
-  $("#templeComplete").css("background-image", `url(../images/temple_${templeLimit}.png)`);
+  $("#temple").css("background-image", `url(./images/temple_${templeCounter}.png)`);
+  $("#templeComplete").css("background-image", `url(./images/temple_${templeLimit}.png)`);
 }
 
 let pray={
@@ -122,7 +122,7 @@ let myTemple={
 
     templeCounter++;
     if (templeCounter<templeLimit){
-      $("#temple").css("background-image", `url(../images/temple_${templeCounter}.png)`);
+      $("#temple").css("background-image", `url(./images/temple_${templeCounter}.png)`);
       let audio=new Audio(assets.brickDrop.sound);
       audio.volume=.4;
       audio.play();
