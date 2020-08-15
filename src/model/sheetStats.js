@@ -5,7 +5,7 @@ const templeLimit=32;
 let diyaLit=false;
 let selectedGod="Ram";
 
-let animationSpeed=2000; //in milliseconds, every 1000 translates to 1 second in between keyframes
+let animationSpeed=2500; //in milliseconds, every 1000 translates to 1 second in between keyframes
 let siteText={
   congrats:'Congratulations!',
   buildButton:`BUILD`,
@@ -18,10 +18,7 @@ let siteText={
 
 let assets={
 
-  DiyaLeft:{
-    image:"",
-    attribution:`Image by <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a>`,
-  },
+
   diyaUnlit:{
       art:"./images/diyaLeftUnlit.png",
       attribution:`Image by <a href="https://pixabay.com/users/aohodesign-1179866/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pollawat Saengthong</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2866819">Pixabay</a>`,
@@ -133,16 +130,16 @@ let assets={
     sound:"./sounds/bell.wav",
   },
   chantRam:{
-    sound:"./sounds/murmer.wav"
+    sound:"./sounds/mantraRam.wav"
   },
   chantShiva:{
-    sound:"./sounds/murmer.wav"
+    sound:"./sounds/mantraShiva.wav"
   },
   chantKrishna:{
-    sound:"./sounds/murmer.wav"
+    sound:"./sounds/mantraKirshna.wav"
   },
   chantHanuman:{
-    sound:"./sounds/murmer.wav"
+    sound:"./sounds/mantraHanuman.wav"
   },
   alight:{
     sound:"./sounds/alight.wav"
@@ -182,6 +179,7 @@ function preloadImgs(){
     if (asset.art){
       let img=new Image();
       img.src=asset.art;
+      console.log(img);
     }
   });
 
