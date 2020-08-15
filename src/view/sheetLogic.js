@@ -8,8 +8,17 @@ sheetProj.view.sheetLogic = {
     $("#krishnaBtn").html(siteText.krishnaBtn);
     $("#hanumanBtn").html(siteText.hanumanBtn);
 
-    $("#chantAudio").attr("src", assets.chant.sound);
-    $('#chantAudio').prop("volume", 0.2);
+    $("#chantAudioRam").attr("src", assets.chantRam.sound);
+    $('#chantAudioRam').prop("volume", 0.2);
+
+    $("#chantAudioShiva").attr("src", assets.chantShiva.sound);
+    $('#chantAudioShiva').prop("volume", 0.2);
+
+    $("#chantAudioKrishna").attr("src", assets.chantKrishna.sound);
+    $('#chantAudioKrishna').prop("volume", 0.2);
+
+    $("#chantAudioHanuman").attr("src", assets.chantHanuman.sound);
+    $('#chantAudioHanuman').prop("volume", 0.2);
 
     $("#alightAudio").attr("src", assets.alight.sound);
     $('#alightAudio').prop("volume", 0.4);
@@ -27,26 +36,32 @@ sheetProj.view.sheetLogic = {
 function displayGod(godName){
 
   let god=godPages[godName];
+  selectedGod=godName;
   diyaLit=false;
   createShrine();
   pray.reset();
-  $("#shrine").css("background-image", `url(${god.art})`);
+  $("#shrine").css("background-image", `url(${god.art[0]})`);
+  ci.animateImg("shrine", god.art, animationSpeed);
+
 }
 
 function createShrine(){
   let shrine=`  <div id="shrineRow">
       <div id="shrine">
         <div id="shrineGarland" class="invisible"></div>
-        <div class="shrineDiya leftDiya"></div>
-        <div class="shrineDiya rightDiya"></div>
+        <div id="lDiya" class="shrineDiya leftDiya"></div>
+        <div id="rDiya" class="shrineDiya rightDiya"></div>
+        <div id="withinCanvasRow">
+          <div id="garlandButton" onclick="pray.placeGarland()" class="shrineButton"></div>
+          <div id="bellButton" onclick="pray.ringBell()" class="shrineButton"></div>
+          <div id="diyaButton" onclick="pray.lightDiya()" class="shrineButton"></div>
+          <div id="chantButton" onclick="pray.chant()" class="shrineButton"></div>
+        </div>
       </div>
     </div>
 
     <div id="shrineButtonRow">
-      <div id="garlandButton" onclick="pray.placeGarland()" class="shrineButton"></div>
-      <div id="bellButton" onclick="pray.ringBell()" class="shrineButton"></div>
-      <div id="diyaButton" onclick="pray.lightDiya()" class="shrineButton"></div>
-      <div id="chantButton" onclick="pray.chant()" class="shrineButton"></div>
+
     </div>`;
 
   $("#creationArea").html(shrine);
@@ -98,21 +113,27 @@ let pray={
   },
   lightDiya:()=>{
     if (!diyaLit){
+
+      $("#alightAudio").trigger("play");
       $(".shrineDiya").css("background-image", `url(${assets.diyaLit.art})`);
-        $("#alightAudio").trigger("play");
       diyaLit=true;
+      ci.animateImg("lDiya", godPages.litDiya.art, animationSpeed/1.5);
+      ci.animateImg("rDiya", godPages.litDiya.art, animationSpeed/1.5);
     }
 
   },
   placeGarland:()=>{
     $("#shrineGarland").removeClass("invisible");
+    if (!$("#shrineGarland").hasClass("placedGarland")){
+      $("#shrineGarland").addClass("placedGarland");
+    }
     new Audio(assets.flowerPlace.sound).play();
   },
   ringBell:()=>{
     new Audio(assets.bellChime.sound).play();
   },
   chant:()=>{
-    $("#chantAudio").trigger("play");
+    $(`#chantAudio${selectedGod}`).trigger("play");
   //  new Audio(assets.chant.sound).play();
 },
 }

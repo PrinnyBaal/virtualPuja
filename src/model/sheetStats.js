@@ -1,29 +1,11 @@
 
 
-// if (localStorage.getItem("savedChars") === null) {
-//   localStorage.setItem('savedChars', JSON.stringify(savedChars));
-// }
-//
-// if (localStorage.getItem("activeChar") === null) {
-//   localStorage.setItem('activeChar', 0);
-// }
-
-// $.ajax({
-//     url : folder,
-//     success: function (data) {
-//         console.log(data);
-//         $(data).find("a").attr("href", function (i, val) {
-//           console.log(val);
-//             if( val.match(/\.(jpe?g|png|gif)$/) ) {
-//                 $("body").append( "<img src='"+ folder + val +"'>" );
-//             }
-//         });
-//     }
-// });
 let templeCounter=0;
 const templeLimit=32;
 let diyaLit=false;
+let selectedGod="Ram";
 
+let animationSpeed=2000; //in milliseconds, every 1000 translates to 1 second in between keyframes
 let siteText={
   congrats:'Congratulations!',
   buildButton:`BUILD`,
@@ -89,7 +71,16 @@ let assets={
   bellChime:{
     sound:"./sounds/bell.wav",
   },
-  chant:{
+  chantRam:{
+    sound:"./sounds/murmer.wav"
+  },
+  chantShiva:{
+    sound:"./sounds/murmer.wav"
+  },
+  chantKrishna:{
+    sound:"./sounds/murmer.wav"
+  },
+  chantHanuman:{
     sound:"./sounds/murmer.wav"
   },
   alight:{
@@ -108,17 +99,20 @@ let assets={
 
 let godPages={
   Ram:{
-    art:assets.Ram.art,
+    art:[assets.Ram.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
 
   },
   Shiva:{
-    art:assets.Shiva.art,
+    art:[assets.Shiva.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
   },
   Hanuman:{
-    art:assets.Hanuman.art,
+    art:[assets.Hanuman.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
   },
   Krishna:{
-    art:assets.Krishna.art,
+    art:[assets.Krishna.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
+  },
+  litDiya:{
+    art:[assets.diyaLit.art, assets.diyaUnlit.art],
   }
 }
 
@@ -132,98 +126,14 @@ function preloadImgs(){
 
   for (let i=0; i<templeLimit; i++){
     let img=new Image();
-    img.src=`../images/temple_${i}.png`;
+    img.src=`./images/temple_${i}.png`;
     console.log(img);
   }
 
 }
-let attributions=[`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`]
-
-let fontSelector={
-  validFonts:false,
-  getFonts:function(){
-    return JSON.parse(localStorage.getItem("fonts"));
-  },
-  getFontList:function(){
-    let detective = new fontSelector.fontDetector();
-    if (localStorage.getItem("fonts")){
-      cardForms.setFontOptions();
-      return;
-    }
 
 
-    let untestedFonts=["Abadi MT Condensed Light", "Albertus Extra Bold", 'Zurich Ex BT','Zurich BlkEx BT',"Albertus Medium","Antique Olive ","Arial","Arial Black","Arial MT","Arial Narrow","Bazooka","Book Antiqua","Bookman Old Style ","Boulder","Calisto MT","Calligrapher","Century Gothic","Century Schoolbook","Cezanne","CG Omega","CG Times","Charlesworth","Chaucer","Clarendon Condensed","Comic Sans MS","Copperplate Gothic Bold","Copperplate Gothic Light","Cornerstone","Coronet","Courier","Courier New","Cuckoo","Dauphin","Denmark","Fransiscan","Garamond","Geneva","Haettenschweiler","Heather","Helvetica","Herald","Impact","Jester","Letter Gothic","Lithograph","Lithograph Light","Long Island","Lucida Console","Lucida Handwriting","Lucida Sans","Lucida Sans Unicode","Marigold","Market","Matisse ITC","MS LineDraw","News GothicMT","OCR A Extended","Old Century","Pegasus","Pickwick","Poster","Pythagoras","Sceptre","Sherwood","Signboard","Socket","Steamer","Storybook","Subway","Tahoma ","Technical",'Teletype','Tempus Sans ITC','Times','Times New Roman','Times New Roman PS','Trebuchet MS','Tristan','Tubular','Unicorn','Univers','Univers Condensed','Vagabond','Verdana','Westminster','Allegro','Amazone BT','AmerType Md BT','Arrus BT','Aurora Cn BT','AvantGarde Bk BT','AvantGarde Md BT','BankGothic Md BT','Benguiat Bk BT','BernhardFashion BT','BernhardMod BT','BinnerD','Bremen Bd BT','CaslonOpnface BT','Charter Bd BT','Charter BT','ChelthmITC Bk BT','CloisterBlack BT','CopperplGoth Bd BT','English 111 Vivace BT','EngraversGothic BT','Exotc350 Bd BT','Freefrm721 Blk BT','FrnkGothITC Bk BT','Futura Bk BT','Futura Lt BT','Futura Md BT','Futura ZBlk BT','FuturaBlack BT','Galliard BT','Geometr231 BT','Geometr231 Hv BT','Geometr231 Lt BT','GeoSlab 703 Lt BT','GeoSlab 703 XBd BT','GoudyHandtooled BT','GoudyOLSt BT','Humanst521 BT','Humanst 521 Cn BT','Humanst521 Lt BT ','Incised901 Bd BT ','Incised901 BT ','Incised901 Lt BT ','Informal011 BT ','Kabel Bk BT ','Kabel Ult BT ','Kaufmann Bd BT ','Kaufmann BT ','Korinna BT ','Lydian BT ','Monotype Corsiva','NewsGoth BT ','Onyx BT ','OzHandicraft BT','PosterBodoni BT','PTBarnum BT','Ribbon131 Bd BT','Serifa BT','Serifa Th BT','ShelleyVolante BT','Souvenir Lt BT','Swis721 BlkEx BT','Swiss911 XCm BT ','TypoUpright BT','ZapfEllipt BT','ZapfHumnst BT','ZapfHumnst Dm BT'];
-    fontSelector.validFonts=untestedFonts.filter(font => detective.detect(font));
 
-  },
-  fontDetector:function(){
-    /**
- * JavaScript code to detect available availability of a
- * particular font in a browser using JavaScript and CSS.
- *
- * Author : Lalit Patel
- * Website: http://www.lalit.org/lab/javascript-css-font-detect/
- * License: Apache Software License 2.0
- *          http://www.apache.org/licenses/LICENSE-2.0
- * Version: 0.15 (21 Sep 2009)
- *          Changed comparision font to default from sans-default-default,
- *          as in FF3.0 font of child element didnt fallback
- *          to parent element if the font is missing.
- * Version: 0.2 (04 Mar 2012)
- *          Comparing font against all the 3 generic font families ie,
- *          "monospace", "sans-serif" and "sans". If it doesn't match all 3
- *          then that font is 100% not available in the system
- * Version: 0.3 (24 Mar 2012)
- *          Replaced sans with serif in the list of baseFonts
- */
-
-/**
- * Usage: d = new Detector();
- *        d.detect("font name");
- */
-    // a font will be compared against all the three default fonts.
-    // and if it doesn't match all 3 then that font is not available.
-    var baseFonts = ["monospace", "sans-serif", "serif"];
-
-    //we use m or w because these two characters take up the maximum width.
-    // And we use a LLi so that the same matching fonts can get separated
-    var testString = "mmmmmmmmmmlli";
-
-    //we test using 72px font size, we may use any size. I guess larger the better.
-    var testSize = "72px";
-
-    var h = document.getElementsByTagName("body")[0];
-
-    // create a SPAN in the document to get the width of the text we use to test
-    var s = document.createElement("span");
-    s.style.fontSize = testSize;
-    s.innerHTML = testString;
-    var defaultWidth = {};
-    var defaultHeight = {};
-    for (var index in baseFonts) {
-        //get the default width for the three base fonts
-        s.style.fontFamily = baseFonts[index];
-        h.appendChild(s);
-        defaultWidth[baseFonts[index]] = s.offsetWidth; //width for the default font
-        defaultHeight[baseFonts[index]] = s.offsetHeight; //height for the defualt font
-        h.removeChild(s);
-    }
-
-    function detect(font) {
-        var detected = false;
-        for (var index in baseFonts) {
-            s.style.fontFamily = font + ',' + baseFonts[index]; // name of the font along with the base font for fallback.
-            h.appendChild(s);
-            var matched = (s.offsetWidth != defaultWidth[baseFonts[index]] || s.offsetHeight != defaultHeight[baseFonts[index]]);
-            h.removeChild(s);
-            detected = detected || matched;
-        }
-        return detected;
-    }
-
-    this.detect = detect;
-  },
-}
 
 let ci={
   jumpTo:function(anchor){
@@ -319,17 +229,13 @@ let ci={
    return (animation);
    function frame() {
      if (frameCount == 10) {
-       console.log("COUNt IT");
-       console.log(imgElement.nodeValue);
-        console.log(imgElement.hasAttributes());
-        console.log(imgElement.parentNode);
-        console.log(imgElement.parentElement);
+
        //clearInterval(animation);
      }
 
 
       frameCount++;
-      imgElement.src=animArray[selectedFrame];
+      imgElement.style["background-image"]=`url('${animArray[selectedFrame]}')`;
       selectedFrame++;
       if (selectedFrame>=animArray.length){
         selectedFrame=0;
