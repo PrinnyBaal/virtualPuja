@@ -29,8 +29,21 @@ let assets={
   diyaLit:{
     art:"./images/diyaLeft.png",
   },
+  diyaLit2:{
+    art:"./images/diyaLeft2.png",
+  },
+  diyaLit3:{
+    art:"./images/diyaLeft3.png",
+  },
+  diyaLit4:{
+    art:"./images/diyaLeft4.png",
+  },
   BellButton:{
     art:"./images/bell.jpg",
+    attribution:`Image by <a href="https://pixabay.com/users/confused_me-32339/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">confused_me</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">Pixabay</a>`,
+  },
+  BellButton2:{
+    art:"./images/bell2.jpg",
     attribution:`Image by <a href="https://pixabay.com/users/confused_me-32339/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">confused_me</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=430642">Pixabay</a>`,
   },
   ChantButton:{
@@ -56,16 +69,64 @@ let assets={
     art:`./images/ramLeap.jpg`,
     attribution:`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`,
   },
+  Ram2:{
+    art:`./images/ramLeap2.jpg`,
+    attribution:`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`,
+  },
+  Ram3:{
+    art:`./images/ramLeap3.jpg`,
+    attribution:`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`,
+  },
+  Ram4:{
+    art:`./images/ramLeap4.jpg`,
+    attribution:`<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>`,
+  },
   Shiva:{
     art:`./images/shiva.jpg`,
+    attribution:`https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/`,
+  },
+  Shiva2:{
+    art:`./images/shiva2.jpg`,
+    attribution:`https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/`,
+  },
+  Shiva3:{
+    art:`./images/shiva3.jpg`,
+    attribution:`https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/`,
+  },
+  Shiva4:{
+    art:`./images/shiva4.jpg`,
     attribution:`https://www.flickr.com/photos/fotocastor/2438587239/sizes/z/`,
   },
   Krishna:{
     art:`./images/Krishna.jpg`,
     attribution:`Image by <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a>`
   },
+  Krishna2:{
+    art:`./images/Krishna2.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a>`
+  },
+  Krishna3:{
+    art:`./images/Krishna3.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a>`
+  },
+  Krishna4:{
+    art:`./images/Krishna4.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/sebpowen-48887/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Seb Powen</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1307395">Pixabay</a>`
+  },
   Hanuman:{
     art:`./images/hanuman.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a>`,
+  },
+  Hanuman2:{
+    art:`./images/hanuman2.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a>`,
+  },
+  Hanuman3:{
+    art:`./images/hanuman3.jpg`,
+    attribution:`Image by <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a>`,
+  },
+  Hanuman4:{
+    art:`./images/hanuman4.jpg`,
     attribution:`Image by <a href="https://pixabay.com/users/tobrother-37903/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">S Das</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=123622">Pixabay</a>`,
   },
   bellChime:{
@@ -99,20 +160,20 @@ let assets={
 
 let godPages={
   Ram:{
-    art:[assets.Ram.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
+    art:[assets.Ram.art, assets.Ram2.art,  assets.Ram3.art,  assets.Ram4.art],
 
   },
   Shiva:{
-    art:[assets.Shiva.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
+    art:[assets.Shiva.art, assets.Shiva2.art,  assets.Shiva3.art,  assets.Shiva4.art],
   },
   Hanuman:{
-    art:[assets.Hanuman.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
+    art:[assets.Hanuman.art, assets.Hanuman2.art,  assets.Hanuman3.art,  assets.Hanuman4.art],
   },
   Krishna:{
-    art:[assets.Krishna.art, assets.templeComplete.art, assets.templeComplete.art, assets.BellButton.art],
+    art:[assets.Krishna.art, assets.Krishna2.art,  assets.Krishna3.art,  assets.Krishna4.art],
   },
   litDiya:{
-    art:[assets.diyaLit.art, assets.diyaUnlit.art],
+    art:[assets.diyaLit.art, assets.diyaLit2.art, assets.diyaLit3.art, assets.diyaLit4.art],
   }
 }
 

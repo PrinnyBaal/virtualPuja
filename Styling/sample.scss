@@ -32,7 +32,7 @@ $baseFont:"Verdana";
 
 
 #bellButton:active{
-  background-image:"url(../images/bellButton)";
+  background-image:"url(../images/bell2.jpg)";
 }
 
 .hoverFlow{
@@ -156,18 +156,12 @@ body{
         width: 15vmin;
         background-size:100% 100%;
         background-repeat: no-repeat;
-        border: 5px solid black;
+      
         border-radius:50%;
         cursor:pointer;
         background-color:grey;
 
-        &:hover{
-          box-shadow:5px 10px black;
-        }
-        &:active{
-          border: 8px solid white;
-          box-shadow:none;
-        }
+
       }
     }
 
@@ -186,7 +180,7 @@ body{
       width:18vmin;
       background-size:100% 100%;
       background-repeat: no-repeat;
-      Top: -3%;
+      bottom: 15.5vmin;
 
 
       &.leftDiya{
