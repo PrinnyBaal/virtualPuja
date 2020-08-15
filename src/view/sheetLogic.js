@@ -2,6 +2,7 @@
 sheetProj.view.sheetLogic = {
   setupUserInterface: function () {
 
+    preloadImgs();
     $("#ramBtn").html(siteText.ramBtn);
     $("#shivaBtn").html(siteText.shivaBtn);
     $("#templeBtn").html(siteText.templeBtn);
@@ -29,7 +30,7 @@ sheetProj.view.sheetLogic = {
   displayGod("Ram");
    setupFlairs();
     setupTempleSite();
-    preloadImgs();
+
     }
 };
 
