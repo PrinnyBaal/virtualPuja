@@ -136,7 +136,7 @@ let assets={
     sound:"./sounds/mantraShiva.wav"
   },
   chantKrishna:{
-    sound:"./sounds/mantraKirshna.wav"
+    sound:"./sounds/mantraKrishna.wav"
   },
   chantHanuman:{
     sound:"./sounds/mantraHanuman.wav"
